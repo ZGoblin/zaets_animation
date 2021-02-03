@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_font_size">34sp</dimen>
+    <dimen name="cardview_margin">8dp</dimen>
+    <dimen name="cardview_corner_radius">8dp</dimen>
+    <dimen name="button_margin">8dp</dimen>
+</resources>
