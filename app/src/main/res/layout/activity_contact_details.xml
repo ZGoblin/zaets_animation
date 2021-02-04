@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionName="@string/transition_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivAvatar"
+        android:transitionName="@string/transition_avatar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintHeight_percent="0.3"
@@ -17,27 +21,30 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvName"
-        android:layout_width="match_parent"
+        android:transitionName="@string/transition_contact_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/contacts"
         android:textSize="@dimen/title_font_size"
         android:textColor="@color/black"
-        android:typeface="monospace"
         android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivAvatar"
         app:layout_constraintBottom_toBottomOf="@id/ivAvatar"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
+        android:id="@+id/tvPhoneNumber"
+        android:transitionName="@string/transition_contact_phone"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="It`s a cool man"
-        android:textSize="@dimen/title_font_size"
-        android:textColor="@color/black"
+        android:text="@string/phone"
+        android:textSize="@dimen/phone_font_size"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/ivAvatar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/phone_margin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvName"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnBack"

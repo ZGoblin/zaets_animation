@@ -7,26 +7,51 @@
     android:layout_margin="@dimen/cardview_margin"
     app:cardCornerRadius="@dimen/cardview_corner_radius">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvContact"
+        android:transitionName="@string/transition_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:background="@android:color/darker_gray">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_launcher_background"/>
+            android:id="@+id/ivAvatar"
+            android:transitionName="@string/transition_avatar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:transitionName="@string/transition_contact_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/contacts"
             android:textSize="@dimen/title_font_size"
-            android:layout_weight="1"
-            android:gravity="center"/>
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvPhoneNumber"/>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumber"
+            android:transitionName="@string/transition_contact_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone"
+            android:textSize="@dimen/phone_font_size"
+            android:gravity="center"
+            android:layout_margin="@dimen/phone_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

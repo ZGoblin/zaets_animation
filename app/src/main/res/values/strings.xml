@@ -2,4 +2,10 @@
     <string name="app_name">Zaets Animation</string>
     <string name="contacts">Contacts</string>
     <string name="back">Back</string>
+    <string name="phone">0957808465</string>
+    <string name="cool_man">It`s a cool man</string>
+    <string name="transition_avatar">avatar</string>
+    <string name="transition_contact_name">contactName</string>
+    <string name="transition_contact_phone">contactPhone</string>
+    <string name="transition_container">container</string>
 </resources>

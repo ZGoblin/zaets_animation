@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ContactsActivity">
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -16,6 +16,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/title_font_size"
         android:typeface="monospace"
+        android:padding="@dimen/title_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
